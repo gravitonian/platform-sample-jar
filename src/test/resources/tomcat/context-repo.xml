@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================================================================================
+    This context file is used only in a development IDE for rapid development,
+    it is never released with the Alfresco.war
+    =================================================================================================================-->
+
+
+<Context>
+    <!-- This enables hot reloading of web resources from uncompressed jars (while in prod they would be loaded from  WEB-INF/lib/{\*.jar}/META-INF/resources -->
+    <JarScanner scanAllDirectories="true" />
+</Context>
