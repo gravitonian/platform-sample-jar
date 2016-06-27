@@ -14,6 +14,7 @@ Then clone this module and run with `mvn clean install -DskipTests=true alfresco
  * No parent pom
  * Standard JAR packaging and layout
  * Works seamlessly with Eclipse and IntelliJ IDEA
+ * JRebel for hot reloading, JRebel maven plugin for generating rebel.xml, agent usage: `MAVEN_OPTS=-Xms256m -Xmx1G -agentpath:/home/martin/apps/jrebel/lib/libjrebel64.so`
  * AMP as an assembly
  * [Configurable Run mojo](https://github.com/Alfresco/alfresco-sdk/blob/sdk-3.0/plugins/alfresco-maven-plugin/src/main/java/org/alfresco/maven/plugin/RunMojo.java) in the `alfresco-maven-plugin`
  * No unit testing/functional tests just yet
