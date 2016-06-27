@@ -51,6 +51,9 @@
         </alfresco.db.url>
         <alfresco.db.datasource.class>org.h2.jdbcx.JdbcDataSource</alfresco.db.datasource.class>
 
+        <!-- JRebel Version (Hot reloading) -->
+        <jrebel.version>1.1.6</jrebel.version>
+
         <!-- Environment to use, Alfresco Maven Plugin will copy alfresco-global.properties from this directory -->
         <env>local</env>
     </properties>
@@ -127,6 +130,32 @@
                         <version>${alfresco.sdk.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!-- Hot reloading with JRebel -->
+            <plugin>
+                <groupId>org.zeroturnaround</groupId>
+                <artifactId>jrebel-maven-plugin</artifactId>
+                <version>${jrebel.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-rebel-xml</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--
+                      addResourcesDirToRebelXml - default is false
+                      Required if the resource directories are to be added to rebel.xml
+                    -->
+                    <addResourcesDirToRebelXml>true</addResourcesDirToRebelXml>
+
+                    <!-- Always generate the rebel.xml file no matter what timestamps -->
+                    <alwaysGenerate>true</alwaysGenerate>
+                </configuration>
             </plugin>
         </plugins>
 
