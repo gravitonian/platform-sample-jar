@@ -26,11 +26,8 @@ Then clone this module and run with `mvn clean install -DskipTests=true alfresco
  
 # TODO
  
-  * Create example module for Share
   * Abstract assembly into a dependency so we don't have to ship the assembly in the archetype
-  * Create new, slim and simply parent pom to set sensible defaults and profiles
-    * Purge, functional/remote unit tests
-    * Ensure that all functionality still works even without parent pom
+  * Purge, functional/remote unit tests
    
   
  
